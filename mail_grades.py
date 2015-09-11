@@ -1,6 +1,8 @@
+from __future__ import print_function
+import csv
+
 # Import smtplib for the actual sending function
 import smtplib
-import csv
 
 # Import the email modules we'll need
 from email.mime.text import MIMEText
@@ -17,7 +19,7 @@ for row in reader:
 
     # Check for NA email
     if student_email == 'NA':
-        print "No email for {0}".format(student_id)
+        print("No email for {0}".format(student_id))
         continue
 
     # Open a plain text file for reading.  For this example, assume that
@@ -43,7 +45,7 @@ for row in reader:
     msg['To'] = student_email
 
     # Send the message via our own SMTP server.
-    print "Trying to send mail to {id} at {email}...".format(id=student_id, email=student_email)
+    print("Trying to send mail to {id} at {email}...".format(id=student_id, email=student_email))
     s = smtplib.SMTP('localhost')
     s.sendmail(me, student_email, msg.as_string())
     s.quit()
