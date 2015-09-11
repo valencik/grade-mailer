@@ -17,9 +17,9 @@ for row in reader:
 
     # Check for NA email
     if student_email == 'NA':
-       print "No email for {0}".format(student_id)
-       continue
-    
+        print "No email for {0}".format(student_id)
+        continue
+
     # Open a plain text file for reading.  For this example, assume that
     # the text file contains only ASCII characters.
     if 0 < student_grade < 26:
@@ -37,11 +37,11 @@ for row in reader:
             # Create a text/plain message
             message = str(fp.read()).format(id=student_id)
             msg = MIMEText(message)
-    
+
     msg['Subject'] = "Hello, World!"
     msg['From'] = me
     msg['To'] = student_email
-    
+
     # Send the message via our own SMTP server.
     print "Trying to send mail to {id} at {email}...".format(id=student_id, email=student_email)
     s = smtplib.SMTP('localhost')
