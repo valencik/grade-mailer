@@ -1,0 +1,9 @@
+Hello,
+
+Our records indicate your student ID is {id}.
+Please alert us immediately if this is incorrect.
+
+We do not have a score recorded for you.
+
+Regards,
+Your instructors.

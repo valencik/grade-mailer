@@ -1,0 +1,10 @@
+Hello,
+
+Our records indicate your student ID is {id}.
+Please alert us immediately if this is incorrect.
+
+You achieved a score of {score} (out of 40) on the test.
+This score is not sufficient to continue.
+
+Regards,
+Your instructors.
